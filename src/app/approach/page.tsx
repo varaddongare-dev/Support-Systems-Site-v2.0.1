@@ -581,7 +581,7 @@ export default function ApproachPage() {
                 style={{ height: "480px" }}
               >
               <Image
-              src="/assets/ag.png"
+              src="/assets/archee.png"
               alt="Archee Gupte - Co-Founder & Neuropsychologist"
               fill
               unoptimized
