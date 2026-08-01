@@ -580,14 +580,14 @@ export default function ApproachPage() {
                 className="md:col-span-6 flex justify-center md:justify-end relative w-full self-end overflow-visible"
                 style={{ height: "480px" }}
               >
-                <Image
-                  src="/assets/ag.PNG"
-                  alt="Archee Gupte - Co-Founder & Neuropsychologist"
-                  fill
-                  unoptimized
-                  sizes="(max-width:768px) 100vw, 50vw"
-                  className="object-contain object-bottom select-none pointer-events-none origin-bottom"
-                  style={{ transform: "scale(1.55)" }}
+              <Image
+              src="/assets/ag.png"
+              alt="Archee Gupte - Co-Founder & Neuropsychologist"
+              fill
+              unoptimized
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-contain object-bottom select-none pointer-events-none origin-bottom"
+              style={{ transform: "scale(1.55)" }}
                 />
               </div>
             </div>
