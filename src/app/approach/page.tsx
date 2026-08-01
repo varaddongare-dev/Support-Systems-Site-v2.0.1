@@ -584,6 +584,7 @@ export default function ApproachPage() {
                   src="/assets/ag.PNG"
                   alt="Archee Gupte - Co-Founder & Neuropsychologist"
                   fill
+                  unoptimized
                   sizes="(max-width:768px) 100vw, 50vw"
                   className="object-contain object-bottom select-none pointer-events-none origin-bottom"
                   style={{ transform: "scale(1.55)" }}
