@@ -67,20 +67,20 @@ export default function ApproachPage() {
   const foundersRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-  const lenis = new Lenis({
-    autoRaf: true,
-  });
+    const lenis = new Lenis({
+      autoRaf: true,
+    });
 
-  lenis.on("scroll", ScrollTrigger.update);
-  ScrollTrigger.refresh();
+    lenis.on("scroll", ScrollTrigger.update);
+    ScrollTrigger.refresh();
 
-  window.scrollTo(0, 0);
-  lenis.scrollTo(0, { immediate: true });
+    window.scrollTo(0, 0);
+    lenis.scrollTo(0, { immediate: true });
 
-  return () => {
-    lenis.destroy();
-  };
-}, []);
+    return () => {
+      lenis.destroy();
+    };
+  }, []);
 
   useGSAP(
     () => {
@@ -187,102 +187,101 @@ export default function ApproachPage() {
       
       {/* HERO SECTION */}
       <section
-  ref={heroRef}
-  className="relative min-h-screen bg-[#faf8f3] flex items-center justify-center overflow-hidden px-6"
->
-  {/* Background Glow */}
-  <div className="absolute inset-0 pointer-events-none">
-    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full bg-[#11698e]/[0.03] blur-3xl" />
-  </div>
+        ref={heroRef}
+        className="relative min-h-screen bg-[#faf8f3] flex items-center justify-center overflow-hidden px-6"
+      >
+        {/* Background Glow */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full bg-[#11698e]/[0.03] blur-3xl" />
+        </div>
 
-  <div className="relative z-10 max-w-4xl mx-auto text-center">
-    <span className="animate-text text-xs font-semibold tracking-[0.3em] uppercase text-[#59c36a] block mb-6">
-      Our Core Philosophy
-    </span>
+        <div className="relative z-10 max-w-4xl mx-auto text-center">
+          <span className="animate-text text-xs font-semibold tracking-[0.3em] uppercase text-[#59c36a] block mb-6">
+            Our Core Philosophy
+          </span>
 
-    <h1 className="animate-text font-serif text-5xl md:text-7xl lg:text-8xl tracking-tight leading-[1.05] text-[#11698e]">
-      The right match
-      <br />
-      <span className="italic font-normal text-[#59c36a]">
-        changes everything.
-      </span>
-    </h1>
+          <h1 className="animate-text font-serif text-5xl md:text-7xl lg:text-8xl tracking-tight leading-[1.05] text-[#11698e]">
+            The right match
+            <br />
+            <span className="italic font-normal text-[#59c36a]">
+              changes everything.
+            </span>
+          </h1>
 
-    <div className="animate-text mt-10 max-w-2xl mx-auto">
-      <p className="text-lg md:text-xl text-[#5c6b68] leading-relaxed font-light">
-        Support Systems was built on a single insight — most therapy
-        fails not because of the person or the treatment, but because
-        of the match. We exist to fix that.
-      </p>
-    </div>
+          <div className="animate-text mt-10 max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl text-[#5c6b68] leading-relaxed font-light">
+              Support Systems was built on a single insight — most therapy
+              fails not because of the person or the treatment, but because
+              of the match. We exist to fix that.
+            </p>
+          </div>
 
-    <div className="animate-text mt-12 flex justify-center">
-      <Link
-  href="/matching"
-  className="
-    group
-    relative
-    inline-flex
-    items-center
-    gap-3
-    overflow-hidden
-    rounded-full
-    px-8
-    py-4
-    font-medium
-    text-white
-    bg-gradient-to-r
-    from-[#11698e]
-    to-[#0f5a7a]
-    shadow-[0_10px_30px_rgba(17,105,142,0.25)]
-    transition-all
-    duration-500
-    hover:-translate-y-1.5
-    hover:shadow-[0_15px_40px_rgba(17,105,142,0.35)]
-  "
->
-  {/* Shine effect */}
-  <span
-    className="
-      absolute
-      inset-0
-      -translate-x-full
-      bg-gradient-to-r
-      from-transparent
-      via-white/20
-      to-transparent
-      transition-transform
-      duration-1000
-      group-hover:translate-x-full
-    "
-  />
+          <div className="animate-text mt-12 flex justify-center">
+            <Link
+              href="/matching"
+              className="
+                group
+                relative
+                inline-flex
+                items-center
+                gap-3
+                overflow-hidden
+                rounded-full
+                px-8
+                py-4
+                font-medium
+                text-white
+                bg-gradient-to-r
+                from-[#11698e]
+                to-[#0f5a7a]
+                shadow-[0_10px_30px_rgba(17,105,142,0.25)]
+                transition-all
+                duration-500
+                hover:-translate-y-1.5
+                hover:shadow-[0_15px_40px_rgba(17,105,142,0.35)]
+              "
+            >
+              <span
+                className="
+                  absolute
+                  inset-0
+                  -translate-x-full
+                  bg-gradient-to-r
+                  from-transparent
+                  via-white/20
+                  to-transparent
+                  transition-transform
+                  duration-1000
+                  group-hover:translate-x-full
+                "
+              />
 
-  <span className="relative z-10">Find Your Match</span>
+              <span className="relative z-10">Find Your Match</span>
 
-  <span
-    className="
-      relative
-      z-10
-      flex
-      h-7
-      w-7
-      items-center
-      justify-center
-      rounded-full
-      bg-white/15
-      backdrop-blur-sm
-      transition-all
-      duration-300
-      group-hover:translate-x-1
-      group-hover:bg-white/20
-    "
-  >
-    →
-  </span>
-</Link>
-    </div>
-  </div>
-</section>
+              <span
+                className="
+                  relative
+                  z-10
+                  flex
+                  h-7
+                  w-7
+                  items-center
+                  justify-center
+                  rounded-full
+                  bg-white/15
+                  backdrop-blur-sm
+                  transition-all
+                  duration-300
+                  group-hover:translate-x-1
+                  group-hover:bg-white/20
+                "
+              >
+                →
+              </span>
+            </Link>
+          </div>
+        </div>
+      </section>
 
       {/* PHILOSOPHY SECTION */}
       <section 
@@ -368,7 +367,7 @@ export default function ApproachPage() {
           </div>
 
           <div className="flex flex-col gap-12 md:gap-16">
-            {approachSteps.map((step, index) => (
+            {approachSteps.map((step) => (
               <div
                 key={step.phase}
                 className="animate-approach-card grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start bg-white border border-black/[0.03] rounded-[32px] p-8 md:p-12 shadow-[0_10px_40px_rgba(0,0,0,0.01)] transition-all duration-300 hover:shadow-[0_20px_50px_rgba(17,105,142,0.04)]"
@@ -448,142 +447,153 @@ export default function ApproachPage() {
 
       {/* FOUNDERS SECTION */}
       <section
-  ref={foundersRef}
-  className="relative overflow-hidden min-h-screen py-24 flex items-center justify-center border-t border-[#11698e]/5"
->
-  <div className="absolute inset-0 pointer-events-none">
-    <div className="absolute top-1/4 left-1/3 w-[600px] h-[600px] rounded-full bg-[#11698e]/[0.03] blur-3xl" />
-    <div className="absolute bottom-1/4 right-1/3 w-[500px] h-[500px] rounded-full bg-[#59c36a]/[0.03] blur-3xl" />
-  </div>
-
-  <div className="w-full max-w-5xl px-6 mx-auto relative z-10 flex flex-col items-center">
-    <div className="text-center mb-16 animate-founder-title">
-      <span className="text-xs font-semibold tracking-[0.25em] uppercase text-[#59c36a] block mb-3">
-        The Founders
-      </span>
-      <h2 className="font-serif text-4xl md:text-5xl text-[#11698e] tracking-tight">
-        Built by people who understand both the brain and the person.
-      </h2>
-    </div>
-
-    <div className="flex flex-col gap-10 w-full max-w-4xl mx-auto">
-      
-      {/* Founder 1: Hrutuja Dongare */}
-      <div
-        className="
-          animate-founder-card
-          relative
-          w-full
-          overflow-hidden
-          rounded-[40px]
-          bg-white
-          border
-          border-black/[0.04]
-          shadow-[0_15px_50px_rgba(0,0,0,0.02)]
-          p-8
-          md:p-12
-          pb-0
-          md:pb-0
-          grid
-          grid-cols-1
-          md:grid-cols-12
-          gap-8
-          items-end
-        "
+        ref={foundersRef}
+        className="relative overflow-hidden min-h-screen py-24 flex items-center justify-center border-t border-[#11698e]/5"
       >
-        <div className="md:col-span-7 flex flex-col justify-center text-left pb-8 md:pb-12">
-          <h3 className="font-serif text-3xl text-[#11698e] tracking-tight">
-            Hrutuja Dongare
-          </h3>
-          <p className="text-sm font-semibold tracking-wide text-[#59c36a] mt-1.5 mb-6 uppercase">
-            Founder &bull; Neuropsychologist
-          </p>
-          <p className="text-[15px] leading-relaxed text-[#5c6b68] mb-8 font-light">
-            Hrutuja founded Support Systems after years of clinical work in neuropsychology, where she observed firsthand how often patients received the wrong therapeutic match — not for lack of options, but for lack of structured guidance.
-          </p>
-          <div className="flex flex-wrap gap-2">
-            <span className="px-4 py-1.5 bg-[#f6f8f8] text-[#11698e] text-xs font-medium rounded-full border border-black/[0.03]">
-              Neuro-Rehab & Assessment
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-1/4 left-1/3 w-[600px] h-[600px] rounded-full bg-[#11698e]/[0.03] blur-3xl" />
+          <div className="absolute bottom-1/4 right-1/3 w-[500px] h-[500px] rounded-full bg-[#59c36a]/[0.03] blur-3xl" />
+        </div>
+
+        <div className="w-full max-w-5xl px-6 mx-auto relative z-10 flex flex-col items-center">
+          <div className="text-center mb-16 animate-founder-title">
+            <span className="text-xs font-semibold tracking-[0.25em] uppercase text-[#59c36a] block mb-3">
+              The Founders
             </span>
-            <span className="px-4 py-1.5 bg-[#f6f8f8] text-[#11698e] text-xs font-medium rounded-full border border-black/[0.03]">
-              rTMS
-            </span>
-            <span className="px-4 py-1.5 bg-[#f6f8f8] text-[#11698e] text-xs font-medium rounded-full border border-black/[0.03]">
-              Biofeedback
-            </span>
+            <h2 className="font-serif text-4xl md:text-5xl text-[#11698e] tracking-tight">
+              Built by people who understand both the brain and the person.
+            </h2>
+          </div>
+
+          <div className="flex flex-col gap-10 w-full max-w-5xl mx-auto px-4">
+            
+            {/* Founder 1: Hrutuja Dongare */}
+            <div
+              className="
+                animate-founder-card
+                relative
+                w-full
+                overflow-hidden
+                rounded-[40px]
+                bg-white
+                border
+                border-black/[0.04]
+                shadow-[0_15px_50px_rgba(0,0,0,0.02)]
+                p-8
+                md:p-12
+                pb-0
+                md:pb-0
+                grid
+                grid-cols-1
+                md:grid-cols-12
+                gap-8
+                items-end
+              "
+            >
+              {/* Text Section (6 Cols) */}
+              <div className="md:col-span-6 flex flex-col justify-center text-left pb-8 md:pb-12">
+                <h3 className="font-serif text-3xl md:text-4xl text-[#11698e] tracking-tight">
+                  Hrutuja Dongare
+                </h3>
+                <p className="text-sm font-semibold tracking-wide text-[#59c36a] mt-1.5 mb-6 uppercase">
+                  Founder &bull; Neuropsychologist
+                </p>
+                <p className="text-[15px] leading-relaxed text-[#5c6b68] mb-8 font-light">
+                  Hrutuja founded Support Systems after years of clinical work in neuropsychology, where she observed firsthand how often patients received the wrong therapeutic match — not for lack of options, but for lack of structured guidance.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="px-4 py-1.5 bg-[#f6f8f8] text-[#11698e] text-xs font-medium rounded-full border border-black/[0.03]">
+                    Neuro-Rehab & Assessment
+                  </span>
+                  <span className="px-4 py-1.5 bg-[#f6f8f8] text-[#11698e] text-xs font-medium rounded-full border border-black/[0.03]">
+                    rTMS
+                  </span>
+                  <span className="px-4 py-1.5 bg-[#f6f8f8] text-[#11698e] text-xs font-medium rounded-full border border-black/[0.03]">
+                    Biofeedback
+                  </span>
+                </div>
+              </div>
+              
+              {/* Force Container Height & Zoom via Inline CSS */}
+              <div 
+                className="md:col-span-6 flex justify-center md:justify-end relative w-full self-end overflow-visible"
+                style={{ height: "480px" }}
+              >
+                <Image
+                  src="/assets/hd.png"
+                  alt="Hrutuja Dongare - Founder & Neuropsychologist"
+                  fill
+                  sizes="(max-width:768px) 100vw, 50vw"
+                  className="object-contain object-bottom select-none pointer-events-none origin-bottom"
+                  style={{ transform: "scale(1.55)" }}
+                  priority
+                />
+              </div>
+            </div>
+
+            {/* Founder 2: Archee Gupte */}
+            <div
+              className="
+                animate-founder-card
+                relative
+                w-full
+                overflow-hidden
+                rounded-[40px]
+                bg-white
+                border
+                border-black/[0.04]
+                shadow-[0_15px_50px_rgba(0,0,0,0.02)]
+                p-8
+                md:p-12
+                pb-0
+                md:pb-0
+                grid
+                grid-cols-1
+                md:grid-cols-12
+                gap-8
+                items-end
+              "
+            >
+              {/* Text Section (6 Cols) */}
+              <div className="md:col-span-6 flex flex-col justify-center text-left pb-8 md:pb-12">
+                <h3 className="font-serif text-3xl md:text-4xl text-[#11698e] tracking-tight">
+                  Archee Gupte
+                </h3>
+                <p className="text-sm font-semibold tracking-wide text-[#59c36a] mt-1.5 mb-6 uppercase">
+                  Co-Founder &bull; Neuropsychologist & Researcher
+                </p>
+                <p className="text-[15px] leading-relaxed text-[#5c6b68] mb-8 font-light">
+                  Archee brings a research lens to everything Support Systems does — ensuring that the matching methodology is grounded in clinical evidence and continuously refined based outcomes and patient feedback.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="px-4 py-1.5 bg-[#f6f8f8] text-[#11698e] text-xs font-medium rounded-full border border-black/[0.03]">
+                    Sensory Research & Analysis
+                  </span>
+                  <span className="px-4 py-1.5 bg-[#f6f8f8] text-[#11698e] text-xs font-medium rounded-full border border-black/[0.03]">
+                    Neuropsychology
+                  </span>
+                </div>
+              </div>
+
+              {/* Force Container Height & Zoom via Inline CSS */}
+              <div 
+                className="md:col-span-6 flex justify-center md:justify-end relative w-full self-end overflow-visible"
+                style={{ height: "480px" }}
+              >
+                <Image
+                  src="/assets/ag.PNG"
+                  alt="Archee Gupte - Co-Founder & Neuropsychologist"
+                  fill
+                  sizes="(max-width:768px) 100vw, 50vw"
+                  className="object-contain object-bottom select-none pointer-events-none origin-bottom"
+                  style={{ transform: "scale(1.55)" }}
+                />
+              </div>
+            </div>
+
           </div>
         </div>
-        
-        <div className="md:col-span-5 flex justify-center md:justify-end relative w-full h-[340px] md:h-[380px] self-end">
-          <Image
-            src="/assets/hd.png"
-            alt="Hrutuja Dongare - Founder & Neuropsychologist"
-            fill
-            sizes="(max-w:768px) 100vw, 40vw"
-            className="object-contain object-bottom select-none pointer-events-none transform scale-105 origin-bottom"
-            priority
-          />
-        </div>
-      </div>
-
-      {/* Founder 2: Archee Gupte */}
-      <div
-        className="
-          animate-founder-card
-          relative
-          w-full
-          overflow-hidden
-          rounded-[40px]
-          bg-white
-          border
-          border-black/[0.04]
-          shadow-[0_15px_50px_rgba(0,0,0,0.02)]
-          p-8
-          md:p-12
-          pb-0
-          md:pb-0
-          grid
-          grid-cols-1
-          md:grid-cols-12
-          gap-8
-          items-end
-        "
-      >
-        <div className="md:col-span-7 flex flex-col justify-center text-left pb-8 md:pb-12">
-          <h3 className="font-serif text-3xl text-[#11698e] tracking-tight">
-            Archee Gupte
-          </h3>
-          <p className="text-sm font-semibold tracking-wide text-[#59c36a] mt-1.5 mb-6 uppercase">
-            Co-Founder &bull; Neuropsychologist & Researcher
-          </p>
-          <p className="text-[15px] leading-relaxed text-[#5c6b68] mb-8 font-light">
-            Archee brings a research lens to everything Support Systems does — ensuring that the matching methodology is grounded in clinical evidence and continuously refined based outcomes and patient feedback.
-          </p>
-          <div className="flex flex-wrap gap-2">
-            <span className="px-4 py-1.5 bg-[#f6f8f8] text-[#11698e] text-xs font-medium rounded-full border border-black/[0.03]">
-              Sensory Research & Analysis
-            </span>
-            <span className="px-4 py-1.5 bg-[#f6f8f8] text-[#11698e] text-xs font-medium rounded-full border border-black/[0.03]">
-              Neuropsychology
-            </span>
-          </div>
-        </div>
-
-        <div className="md:col-span-5 flex justify-center md:justify-end relative w-full h-[340px] md:h-[380px] self-end">
-          <Image
-            src="/assets/ag.png"
-            alt="Archee Gupte - Co-Founder & Neuropsychologist"
-            fill
-            sizes="(max-w:768px) 100vw, 40vw"
-            className="object-contain object-bottom select-none pointer-events-none transform scale-105 origin-bottom"
-            priority
-          />
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
+      </section>
 
     </div>
   );
