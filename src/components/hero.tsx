@@ -381,904 +381,910 @@ export default function Home() {
   );
 
   return (
-    <div ref={pageRef} className="bg-[#faf8f3] w-full relative">
+    <div ref={pageRef} className="bg-[#faf8f3] w-full relative overflow-x-hidden">
       
-<section
-  ref={heroRef}
-  className="relative overflow-hidden bg-[#faf8f3] min-h-screen flex items-center pt-32 pb-16 lg:py-24"
->
-  <div className="absolute inset-0 z-0">
-    <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(89,195,106,0.08),transparent_50%)] hidden lg:block" />
-    <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,rgba(89,195,106,0.08),transparent_60%)] lg:hidden" />
-    <svg
-      className="absolute inset-0 h-full w-full stroke-[#11698e]/[0.03] [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
-      aria-hidden="true"
-    >
-      <defs>
-        <pattern
-          id="neural-pattern"
-          width="80"
-          height="80"
-          patternUnits="userSpaceOnUse"
-          x="50%"
-          y="-1"
-        >
-          <path d="M.5 80V.5H80" fill="none" />
-          <circle cx="80" cy="80" r="1.5" className="fill-[#11698e]/10" />
-          <circle cx="0" cy="0" r="1.5" className="fill-[#11698e]/10" />
-        </pattern>
-      </defs>
-      <rect width="100%" height="100%" fill="url(#neural-pattern)" />
-    </svg>
-  </div>
-
-  <div className="container relative z-10 mx-auto max-w-7xl px-5 sm:px-6">
-    <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-      
-      <div className="lg:col-span-7 flex flex-col items-center text-center lg:items-start lg:text-left">
-        <h1
-          className="
-            font-serif
-            text-[#11698e]
-            text-[2.75rem]
-            sm:text-[4rem]
-            md:text-[4.5rem]
-            xl:text-[5.25rem]
-            leading-[1.05]
-            tracking-[-0.03em]
-            max-w-[12ch]
-            animate-hero-fade
-          "
-        >
-          Not sure where to start
-          <br />
-          in your journey?
-          <span
-            className="
-              block
-              mt-4
-              text-[#59c36a]
-              italic
-              font-normal
-              text-[0.6em]
-              tracking-wide
-              leading-[1.1]
-            "
+      {/* Hero Section */}
+      <section
+        ref={heroRef}
+        className="relative overflow-hidden bg-[#faf8f3] min-h-screen flex items-center pt-32 pb-16 lg:py-24"
+      >
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(89,195,106,0.08),transparent_50%)] hidden lg:block" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,rgba(89,195,106,0.08),transparent_60%)] lg:hidden" />
+          <svg
+            className="absolute inset-0 h-full w-full stroke-[#11698e]/[0.03] [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
+            aria-hidden="true"
           >
-            Let us help you find the right therapist.
-          </span>
-        </h1>
-
-        <p
-          className="
-            mt-6
-            max-w-md
-            text-base
-            sm:text-lg
-            leading-relaxed
-            text-[#5c6b68]
-            animate-hero-fade
-          "
-        >
-          You are not alone, we are here for you.
-        </p>
-
-        <div
-          className="
-            mt-8
-            flex
-            flex-col
-            sm:flex-row
-            items-center
-            justify-center
-            lg:justify-start
-            gap-4
-            w-full
-            sm:w-auto
-            animate-hero-fade
-          "
-        >
-          <Link
-            href="/matching"
-            className="
-              group
-              relative
-              inline-flex
-              items-center
-              justify-center
-              overflow-hidden
-              rounded-full
-              px-8
-              py-4
-              w-full
-              sm:w-auto
-              font-semibold
-              text-white
-              bg-[#11698e]
-              border border-[#0f5f80]
-              shadow-[0_12px_30px_rgba(17,105,142,0.25)]
-              transition-all
-              duration-300
-              hover:-translate-y-1.5
-              hover:shadow-[0_18px_40px_rgba(17,105,142,0.35)]
-              active:translate-y-0
-            "
-          >
-            <span
-              className="
-                absolute
-                inset-0
-                bg-gradient-to-r
-                from-transparent
-                via-white/15
-                to-transparent
-                -translate-x-full
-                group-hover:translate-x-full
-                transition-transform
-                duration-1000
-              "
-            />
-            <span className="relative flex items-center gap-2">
-              Start Matching Now
-              <span className="transition-transform duration-300 group-hover:translate-x-1.5">
-                →
-              </span>
-            </span>
-          </Link>
-
-          <Link
-            href="/approach"
-            className="
-              group
-              relative
-              inline-flex
-              items-center
-              justify-center
-              gap-2
-              overflow-hidden
-              rounded-full
-              px-8
-              py-4
-              w-full
-              sm:w-auto
-              font-semibold
-              text-[#11698e]
-              bg-white/90
-              border
-              border-[#11698e]/20
-              backdrop-blur-sm
-              shadow-[0_8px_24px_rgba(17,105,142,0.08)]
-              transition-all
-              duration-300
-              hover:-translate-y-1
-              hover:bg-white
-              hover:border-[#11698e]/35
-              hover:shadow-[0_12px_30px_rgba(17,105,142,0.15)]
-            "
-          >
-            <span
-              className="
-                absolute
-                inset-0
-                bg-gradient-to-r
-                from-transparent
-                via-[#11698e]/5
-                to-transparent
-                -translate-x-full
-                group-hover:translate-x-full
-                transition-transform
-                duration-1000
-              "
-            />
-            <span className="relative">How It Works</span>
-            <span className="relative transition-transform duration-300 group-hover:translate-x-1">
-              →
-            </span>
-          </Link>
-        </div>
-        <div className="mt-10 h-px w-32 bg-gradient-to-r from-[#11698e]/20 via-[#11698e]/5 to-transparent" />
-
-        <div
-          className="
-            mt-8
-            flex
-            items-center
-            gap-3
-            justify-center
-            lg:justify-start
-            max-w-sm
-            text-sm
-            text-[#5c6b68]
-          "
-        >
-          <div className="flex-shrink-0">
-            <div className="w-6 h-6 rounded-full bg-[#59c36a]/15 flex items-center justify-center">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="14"
-                height="14"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="#59c36a"
-                strokeWidth="2"
+            <defs>
+              <pattern
+                id="neural-pattern"
+                width="80"
+                height="80"
+                patternUnits="userSpaceOnUse"
+                x="50%"
+                y="-1"
               >
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-              </svg>
+                <path d="M.5 80V.5H80" fill="none" />
+                <circle cx="80" cy="80" r="1.5" className="fill-[#11698e]/10" />
+                <circle cx="0" cy="0" r="1.5" className="fill-[#11698e]/10" />
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#neural-pattern)" />
+          </svg>
+        </div>
+
+        <div className="container relative z-10 mx-auto max-w-7xl px-5 sm:px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+            
+            <div className="lg:col-span-7 flex flex-col items-center text-center lg:items-start lg:text-left">
+              <h1
+                className="
+                  font-serif
+                  text-[#11698e]
+                  text-[2.75rem]
+                  sm:text-[4rem]
+                  md:text-[4.5rem]
+                  xl:text-[5.25rem]
+                  leading-[1.05]
+                  tracking-[-0.03em]
+                  max-w-[12ch]
+                  animate-hero-fade
+                "
+              >
+                Not sure where to start
+                <br />
+                in your journey?
+                <span
+                  className="
+                    block
+                    mt-4
+                    text-[#59c36a]
+                    italic
+                    font-normal
+                    text-[0.6em]
+                    tracking-wide
+                    leading-[1.1]
+                  "
+                >
+                  Let us help you find the right therapist.
+                </span>
+              </h1>
+
+              <p
+                className="
+                  mt-6
+                  max-w-md
+                  text-base
+                  sm:text-lg
+                  leading-relaxed
+                  text-[#5c6b68]
+                  animate-hero-fade
+                "
+              >
+                You are not alone, we are here for you.
+              </p>
+
+              <div
+                className="
+                  mt-8
+                  flex
+                  flex-col
+                  sm:flex-row
+                  items-center
+                  justify-center
+                  lg:justify-start
+                  gap-4
+                  w-full
+                  sm:w-auto
+                  animate-hero-fade
+                "
+              >
+                <Link
+                  href="/matching"
+                  className="
+                    group
+                    relative
+                    inline-flex
+                    items-center
+                    justify-center
+                    overflow-hidden
+                    rounded-full
+                    px-8
+                    py-4
+                    w-full
+                    sm:w-auto
+                    font-semibold
+                    text-white
+                    bg-[#11698e]
+                    border border-[#0f5f80]
+                    shadow-[0_12px_30px_rgba(17,105,142,0.25)]
+                    transition-all
+                    duration-300
+                    hover:-translate-y-1.5
+                    hover:shadow-[0_18px_40px_rgba(17,105,142,0.35)]
+                    active:translate-y-0
+                  "
+                >
+                  <span
+                    className="
+                      absolute
+                      inset-0
+                      bg-gradient-to-r
+                      from-transparent
+                      via-white/15
+                      to-transparent
+                      -translate-x-full
+                      group-hover:translate-x-full
+                      transition-transform
+                      duration-1000
+                    "
+                  />
+                  <span className="relative flex items-center gap-2">
+                    Start Matching Now
+                    <span className="transition-transform duration-300 group-hover:translate-x-1.5">
+                      →
+                    </span>
+                  </span>
+                </Link>
+
+                <Link
+                  href="/approach"
+                  className="
+                    group
+                    relative
+                    inline-flex
+                    items-center
+                    justify-center
+                    gap-2
+                    overflow-hidden
+                    rounded-full
+                    px-8
+                    py-4
+                    w-full
+                    sm:w-auto
+                    font-semibold
+                    text-[#11698e]
+                    bg-white/90
+                    border
+                    border-[#11698e]/20
+                    backdrop-blur-sm
+                    shadow-[0_8px_24px_rgba(17,105,142,0.08)]
+                    transition-all
+                    duration-300
+                    hover:-translate-y-1
+                    hover:bg-white
+                    hover:border-[#11698e]/35
+                    hover:shadow-[0_12px_30px_rgba(17,105,142,0.15)]
+                  "
+                >
+                  <span
+                    className="
+                      absolute
+                      inset-0
+                      bg-gradient-to-r
+                      from-transparent
+                      via-[#11698e]/5
+                      to-transparent
+                      -translate-x-full
+                      group-hover:translate-x-full
+                      transition-transform
+                      duration-1000
+                    "
+                  />
+                  <span className="relative">How It Works</span>
+                  <span className="relative transition-transform duration-300 group-hover:translate-x-1">
+                    →
+                  </span>
+                </Link>
+              </div>
+              <div className="mt-10 h-px w-32 bg-gradient-to-r from-[#11698e]/20 via-[#11698e]/5 to-transparent" />
+
+              <div
+                className="
+                  mt-8
+                  flex
+                  items-center
+                  gap-3
+                  justify-center
+                  lg:justify-start
+                  max-w-sm
+                  text-sm
+                  text-[#5c6b68]
+                "
+              >
+                <div className="flex-shrink-0">
+                  <div className="w-6 h-6 rounded-full bg-[#59c36a]/15 flex items-center justify-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="14"
+                      height="14"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#59c36a"
+                      strokeWidth="2"
+                    >
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                    </svg>
+                  </div>
+                </div>
+                <span>
+                  Your information remains private, confidential and secure.
+                </span>
+              </div>
+
+              <div
+                className="
+                  mt-12
+                  grid
+                  grid-cols-1
+                  sm:grid-cols-3
+                  gap-4
+                  w-full
+                  max-w-2xl
+                  mx-auto
+                "
+              >
+                {[
+                  { value: "100%", label: "Confidential" },
+                  { value: "Verified", label: "Licensed" },
+                  { value: "24/7", label: "Support Available" },
+                ].map((item) => (
+                  <div
+                    key={item.label}
+                    className="
+                      flex
+                      flex-col
+                      items-center
+                      justify-center
+                      text-center
+                      py-5
+                      px-4
+                      rounded-2xl
+                      bg-white/70
+                      backdrop-blur-sm
+                      border
+                      border-[#11698e]/10
+                      shadow-[0_8px_30px_rgba(17,105,142,0.06)]
+                      hover:border-[#59c36a]/20
+                      hover:-translate-y-1
+                      transition-all
+                      duration-300
+                    "
+                  >
+                    <p className="text-2xl sm:text-3xl font-semibold text-[#11698e] tracking-tight">
+                      {item.value}
+                    </p>
+                    <p className="mt-1 text-sm text-[#5c6b68]">
+                      {item.label}
+                    </p>
+                  </div>
+                ))}
+              </div>
+
             </div>
+
+            <div className="lg:col-span-5 w-full flex items-center justify-center lg:justify-end animate-hero-fade -mt-8 sm:-mt-12 lg:-mt-16">
+              <div className="relative w-full max-w-[320px] sm:max-w-[400px] lg:max-w-full aspect-square opacity-85 hover:opacity-100 transition-opacity duration-500">
+                <Image
+                  src="/assets/background.png"
+                  alt=""
+                  fill
+                  priority
+                  sizes="(max-width: 640px) 320px, (max-width: 1024px) 400px, 40vw"
+                  className="object-contain"
+                />
+              </div>
+            </div>
+
           </div>
-          <span>
-            Your information remains private, confidential and secure.
-          </span>
         </div>
-
-        <div
-          className="
-            mt-12
-            grid
-            grid-cols-1
-            sm:grid-cols-3
-            gap-4
-            w-full
-            max-w-2xl
-            mx-auto
-          "
-        >
-          {[
-            { value: "100%", label: "Confidential" },
-            { value: "Verified", label: "Licensed" },
-            { value: "24/7", label: "Support Available" },
-          ].map((item) => (
-            <div
-              key={item.label}
-              className="
-                flex
-                flex-col
-                items-center
-                justify-center
-                text-center
-                py-5
-                px-4
-                rounded-2xl
-                bg-white/70
-                backdrop-blur-sm
-                border
-                border-[#11698e]/10
-                shadow-[0_8px_30px_rgba(17,105,142,0.06)]
-                hover:border-[#59c36a]/20
-                hover:-translate-y-1
-                transition-all
-                duration-300
-              "
-            >
-              <p className="text-2xl sm:text-3xl font-semibold text-[#11698e] tracking-tight">
-                {item.value}
-              </p>
-              <p className="mt-1 text-sm text-[#5c6b68]">
-                {item.label}
-              </p>
-            </div>
-          ))}
-        </div>
-
-      </div>
-
-      <div className="lg:col-span-5 w-full flex items-center justify-center lg:justify-end animate-hero-fade -mt-8 sm:-mt-12 lg:-mt-16">
-        <div className="relative w-full max-w-[320px] sm:max-w-[400px] lg:max-w-full aspect-square opacity-85 hover:opacity-100 transition-opacity duration-500">
-          <Image
-            src="/assets/background.png"
-            alt=""
-            fill
-            priority
-            sizes="(max-width: 640px) 320px, (max-width: 1024px) 400px, 40vw"
-            className="object-contain"
-          />
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
+      </section>
 
       <div className="relative z-20 bg-[#faf8f3]">
         
-    <section
-      ref={sectionRef}
-      className="relative overflow-hidden min-h-screen py-24 flex items-center border-t border-[#11698e]/5 bg-[#fcfdfe]"
-    >
-      <div className="absolute top-20 right-0 w-[500px] h-[500px] rounded-full bg-[#11698e]/[0.03] blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-[#59c36a]/[0.03] blur-3xl pointer-events-none" />
+        {/* Have You Ever Section */}
+        <section
+          ref={sectionRef}
+          className="relative overflow-hidden min-h-screen py-24 flex items-center border-t border-[#11698e]/5 bg-[#fcfdfe]"
+        >
+          <div className="absolute top-20 right-0 w-[500px] h-[500px] rounded-full bg-[#11698e]/[0.03] blur-3xl pointer-events-none" />
+          <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-[#59c36a]/[0.03] blur-3xl pointer-events-none" />
 
-      <div className="container relative z-10 max-w-6xl px-6 mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-[420px_1fr] gap-16 items-center">
+          <div className="container relative z-10 max-w-6xl px-6 mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-[420px_1fr] gap-16 items-center">
 
-          <div className="flex flex-col items-center lg:items-start text-center lg:text-left animate-hook-left">
-            <span className="text-xs font-semibold tracking-[0.25em] uppercase text-[#59c36a] mb-3">
-              Tell us more...
-            </span>
+              <div className="flex flex-col items-center lg:items-start text-center lg:text-left animate-hook-left">
+                <span className="text-xs font-semibold tracking-[0.25em] uppercase text-[#59c36a] mb-3">
+                  Tell us more...
+                </span>
 
-            <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl text-[#11698e] leading-[0.95] tracking-tight">
-              Have you
-              <br />
-              ever?
-            </h2>
+                <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl text-[#11698e] leading-[0.95] tracking-tight">
+                  Have you
+                  <br />
+                  ever?
+                </h2>
 
-            <div className="relative w-full max-w-[340px] aspect-square mt-6 float-image">
-              <Image
-                src="/assets/have-you-ever.png"
-                alt="Mental health journey reflection graphics"
-                fill
-                priority
-                sizes="(max-width: 1024px) 100vw, 40vw"
-                className="object-contain"
-              />
+                <div className="relative w-full max-w-[340px] aspect-square mt-6 float-image">
+                  <Image
+                    src="/assets/have-you-ever.png"
+                    alt="Mental health journey reflection graphics"
+                    fill
+                    priority
+                    sizes="(max-width: 1024px) 100vw, 40vw"
+                    className="object-contain"
+                  />
+                </div>
+              </div>
+
+              <div className="relative flex flex-col gap-5">
+                <div className="absolute left-11 top-8 bottom-32 w-px bg-gradient-to-b from-[#59c36a]/20 via-[#11698e]/15 to-transparent hidden lg:block" />
+
+                {hooksData.map((item, index) => (
+                  <a
+                    key={index}
+                    href={item.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="
+                      group
+                      relative
+                      overflow-hidden
+                      flex
+                      items-center
+                      justify-between
+                      w-full
+                      rounded-2xl
+                      border
+                      border-[#11698e]/8
+                      bg-white/70
+                      backdrop-blur-sm
+                      px-5
+                      sm:px-6
+                      py-5
+                      sm:py-6
+                      shadow-[0_4px_20px_rgba(17,105,142,0.04)]
+                      transition-all
+                      duration-300
+                      hover:-translate-y-0.5
+                      hover:scale-[1.01]
+                      hover:border-[#11698e]/20
+                      hover:shadow-[0_12px_40px_rgba(17,105,142,0.06)]
+                    "
+                  >
+                    <div className="absolute left-0 top-0 h-full w-0 bg-[#59c36a] transition-all duration-300 group-hover:w-1" />
+
+                    <div className="flex items-start gap-5 relative z-10 flex-1 pr-4">
+                      <div className="flex items-center justify-center w-10 h-10 rounded-full bg-[#11698e]/5 text-[#11698e] font-semibold text-sm shrink-0">
+                        {String(index + 1).padStart(2, "0")}
+                      </div>
+
+                      <span className="text-[17px] leading-relaxed text-[#37474F] pt-1.5 transition-colors duration-300 group-hover:text-[#11698e]">
+                        {item.text}
+                      </span>
+                    </div>
+
+                    <div className="flex items-center justify-center w-10 h-10 rounded-full bg-[#f6f8f8] shrink-0 transition-all duration-300 group-hover:bg-[#59c36a]/10 group-hover:scale-110">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="#59c36a"
+                        strokeWidth="2.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="transition-transform duration-300 group-hover:translate-x-1"
+                      >
+                        <path d="M5 12h14" />
+                        <path d="m12 5 7 7-7 7" />
+                      </svg>
+                    </div>
+                  </a>
+                ))}
+
+                <Link
+                  href="/contact"
+                  className="
+                    group
+                    relative
+                    overflow-hidden
+                    flex
+                    items-center
+                    justify-between
+                    w-full
+                    rounded-[28px]
+                    bg-gradient-to-r
+                    from-[#11698e]
+                    to-[#16779f]
+                    border
+                    border-white/10
+                    px-7
+                    py-7
+                    text-white
+                    shadow-[0_10px_30px_rgba(17,105,142,0.15)]
+                    transition-all
+                    duration-300
+                    hover:-translate-y-0.5
+                    hover:scale-[1.01]
+                    hover:shadow-[0_18px_50px_rgba(17,105,142,0.22)]
+                  "
+                >
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+
+                  <span className="relative z-10 font-serif text-2xl tracking-wide">
+                    Just reach out
+                  </span>
+
+                  <div className="relative z-10 flex items-center justify-center w-10 h-10 rounded-full bg-white/10 transition-all duration-300 group-hover:bg-white/20 group-hover:translate-x-1">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="M5 12h14" />
+                      <path d="m12 5 7 7-7 7" />
+                    </svg>
+                  </div>
+                </Link>
+
+              </div>
             </div>
           </div>
+        </section>
 
-          <div className="relative flex flex-col gap-5">
-            <div className="absolute left-11 top-8 bottom-32 w-px bg-gradient-to-b from-[#59c36a]/20 via-[#11698e]/15 to-transparent hidden lg:block" />
+        {/* What Do We Do Section */}
+        <section className="relative overflow-hidden py-28 border-t border-[#11698e]/5">
+          <div className="absolute top-0 right-0 w-[450px] h-[450px] rounded-full bg-[#11698e]/[0.03] blur-3xl pointer-events-none" />
+          <div className="absolute bottom-0 left-0 w-[350px] h-[350px] rounded-full bg-[#59c36a]/[0.04] blur-3xl pointer-events-none" />
 
-            {hooksData.map((item, index) => (
-              <a
-                key={index}
-                href={item.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="
-                  group
-                  relative
-                  overflow-hidden
-                  flex
-                  items-center
-                  justify-between
-                  w-full
-                  rounded-2xl
-                  border
-                  border-[#11698e]/8
-                  bg-white/70
-                  backdrop-blur-sm
-                  px-5
-                  sm:px-6
-                  py-5
-                  sm:py-6
-                  shadow-[0_4px_20px_rgba(17,105,142,0.04)]
-                  transition-all
-                  duration-300
-                  hover:-translate-y-0.5
-                  hover:scale-[1.01]
-                  hover:border-[#11698e]/20
-                  hover:shadow-[0_12px_40px_rgba(17,105,142,0.06)]
-                "
-              >
-                <div className="absolute left-0 top-0 h-full w-0 bg-[#59c36a] transition-all duration-300 group-hover:w-1" />
+          <div className="relative z-10 max-w-6xl mx-auto px-6">
+            
+            <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-14 items-start">
+              
+              <div>
+                <span className="text-xs font-semibold tracking-[0.25em] uppercase text-[#59c36a]">
+                  How We Help
+                </span>
 
-                <div className="flex items-start gap-5 relative z-10 flex-1 pr-4">
-                  <div className="flex items-center justify-center w-10 h-10 rounded-full bg-[#11698e]/5 text-[#11698e] font-semibold text-sm shrink-0">
-                    {String(index + 1).padStart(2, "0")}
+                <h2
+                  className="
+                    mt-4
+                    font-serif
+                    text-4xl
+                    sm:text-5xl
+                    md:text-6xl
+                    text-[#11698e]
+                    leading-[0.95]
+                    tracking-tight
+                  "
+                >
+                  What do we do?
+                </h2>
+              </div>
+
+              <div className="space-y-6">
+                <p className="text-lg leading-relaxed text-[#37474F]">
+                  You don’t have to manage everything alone. We’re with you
+                  at every step of the way.
+                </p>
+
+                <p className="text-lg leading-relaxed text-[#37474F]">
+                  From understanding your concerns to helping you begin
+                  therapy, scheduling sessions, and ensuring you feel
+                  supported, we make sure the process doesn’t feel
+                  overwhelming or disconnected.
+                </p>
+
+                <div
+                  className="
+                    border-l-2
+                    border-[#59c36a]
+                    pl-5
+                  "
+                >
+                  <p className="font-medium text-[#11698e] text-xl leading-relaxed">
+                    We don’t just refer you to a therapist.
+                    We stay with you through your journey.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-14 sm:mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+              {[
+                {
+                  number: "01",
+                  title: "Understand",
+                  image: "/assets/understand.jpg",
+                  color: "#11698e",
+                  text: "We take the time to understand your concerns and what support feels right for you.",
+                },
+                {
+                  number: "02",
+                  title: "Connect",
+                  image: "/assets/connect.jpg",
+                  color: "#59c36a",
+                  text: "We help match you with a therapist and guide you through the first steps of beginning therapy.",
+                },
+                {
+                  number: "03",
+                  title: "Support",
+                  image: "/assets/support.jpg",
+                  color: "#11698e",
+                  text: "We continue supporting you throughout the process so you never feel alone or disconnected.",
+                },
+              ].map((item) => (
+                <div
+                  key={item.title}
+                  className="
+                    group
+                    overflow-hidden
+                    rounded-3xl
+                    border
+                    border-[#11698e]/10
+                    bg-white/80
+                    backdrop-blur-sm
+                    shadow-[0_8px_24px_rgba(17,105,142,0.05)]
+                    transition-all
+                    duration-500
+                    hover:-translate-y-1
+                    hover:shadow-[0_15px_40px_rgba(17,105,142,0.08)]
+                    h-full
+                  "
+                >
+                  {/* Image */}
+                  <div className="relative h-44 sm:h-52 md:h-56 overflow-hidden">
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      className="
+                        object-cover
+                        transition-transform
+                        duration-700
+                        group-hover:scale-105
+                      "
+                    />
                   </div>
 
-                  <span className="text-[17px] leading-relaxed text-[#37474F] pt-1.5 transition-colors duration-300 group-hover:text-[#11698e]">
-                    {item.text}
-                  </span>
+                  {/* Content */}
+                  <div className="p-5 sm:p-6 lg:p-8">
+                    <div
+                      className="
+                        flex
+                        items-center
+                        justify-center
+                        w-10
+                        h-10
+                        sm:w-12
+                        sm:h-12
+                        rounded-full
+                        font-semibold
+                        text-sm
+                        sm:text-base
+                      "
+                      style={{
+                        backgroundColor: `${item.color}15`,
+                        color: item.color,
+                      }}
+                    >
+                      {item.number}
+                    </div>
+
+                    <h3
+                      className="
+                        mt-4
+                        sm:mt-6
+                        text-lg
+                        sm:text-xl
+                        font-medium
+                        text-[#11698e]
+                      "
+                    >
+                      {item.title}
+                    </h3>
+
+                    <p
+                      className="
+                        mt-2
+                        sm:mt-3
+                        text-sm
+                        sm:text-base
+                        leading-relaxed
+                        text-[#37474F]
+                      "
+                    >
+                      {item.text}
+                    </p>
+                  </div>
                 </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-                <div className="flex items-center justify-center w-10 h-10 rounded-full bg-[#f6f8f8] shrink-0 transition-all duration-300 group-hover:bg-[#59c36a]/10 group-hover:scale-110">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="18"
-                    height="18"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="#59c36a"
-                    strokeWidth="2.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="transition-transform duration-300 group-hover:translate-x-1"
-                  >
-                    <path d="M5 12h14" />
-                    <path d="m12 5 7 7-7 7" />
-                  </svg>
-                </div>
-              </a>
-            ))}
+        {/* Why We Exist Section */}
+        <section className="relative overflow-hidden py-28 border-t border-[#11698e]/5">
+          <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-[#11698e]/[0.03] blur-3xl pointer-events-none" />
+          <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-[#59c36a]/[0.03] blur-3xl pointer-events-none" />
 
-            <Link
-              href="/contact"
-              className="
-                group
-                relative
-                overflow-hidden
-                flex
-                items-center
-                justify-between
-                w-full
-                rounded-[28px]
-                bg-gradient-to-r
-                from-[#11698e]
-                to-[#16779f]
-                border
-                border-white/10
-                px-7
-                py-7
-                text-white
-                shadow-[0_10px_30px_rgba(17,105,142,0.15)]
-                transition-all
-                duration-300
-                hover:-translate-y-0.5
-                hover:scale-[1.01]
-                hover:shadow-[0_18px_50px_rgba(17,105,142,0.22)]
-              "
-            >
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+          <div className="relative z-10 max-w-6xl mx-auto px-6">
 
-              <span className="relative z-10 font-serif text-2xl tracking-wide">
-                Just reach out
-              </span>
+            <div className="grid lg:grid-cols-[360px_1fr] gap-16 items-start">
 
-              <div className="relative z-10 flex items-center justify-center w-10 h-10 rounded-full bg-white/10 transition-all duration-300 group-hover:bg-white/20 group-hover:translate-x-1">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="18"
-                  height="18"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
+              <div className="lg:sticky lg:top-32">
+                <span className="text-xs font-semibold tracking-[0.25em] uppercase text-[#59c36a]">
+                  Our Purpose
+                </span>
+
+                <h2
+                  className="
+                    mt-4
+                    font-serif
+                    text-4xl
+                    sm:text-5xl
+                    md:text-6xl
+                    leading-[0.95]
+                    tracking-tight
+                    text-[#11698e]
+                  "
                 >
-                  <path d="M5 12h14" />
-                  <path d="m12 5 7 7-7 7" />
-                </svg>
+                  Why we exist?
+                </h2>
+
+                <div
+                  className="
+                    mt-10
+                    w-20
+                    h-[2px]
+                    bg-[#59c36a]
+                  "
+                />
               </div>
-            </Link>
+
+              <div
+                className="
+                  rounded-[32px]
+                  border
+                  border-[#11698e]/10
+                  bg-white/75
+                  backdrop-blur-sm
+                  p-8
+                  md:p-10
+                  shadow-[0_15px_50px_rgba(17,105,142,0.06)]
+                "
+              >
+                <div className="space-y-7 text-[18px] leading-relaxed text-[#37474F]">
+
+                  <p>
+                    When something feels off physically, you see a GP.
+                    They listen, assess, and point you to exactly the right specialist.
+                    It’s clear. It’s structured. You’re not left guessing.
+                  </p>
+
+                  <p>
+                    Mental health should work the same way but right now, it doesn’t.
+                  </p>
+
+                  <p>
+                    You’re searching, scrolling, trying to figure out where to even begin.
+                  </p>
+
+                  <p className="text-[#11698e] font-medium">
+                    That’s where we come in.
+                  </p>
+
+                  <div
+                    className="
+                      rounded-2xl
+                      bg-[#59c36a]/8
+                      border
+                      border-[#59c36a]/15
+                      px-6
+                      py-5
+                    "
+                  >
+                    <p className="font-serif text-2xl text-[#11698e]">
+                      Think of us as your GP for mental health!
+                    </p>
+                  </div>
+
+                  <p>
+                    We listen first, then guide you to the right support,
+                    whether that’s therapy, psychiatry, neuropsychology,
+                    or something else entirely.
+                  </p>
+
+                  <p>
+                    Because finding help shouldn’t feel like another problem to solve.
+                  </p>
+
+                </div>
+              </div>
+            </div>
+
+            <div
+              className="
+                mt-12
+                rounded-[28px]
+                border
+                border-[#11698e]/10
+                bg-[#11698e]
+                px-8
+                py-10
+                text-center
+              "
+            >
+              <p
+                className="
+                  font-serif
+                  text-2xl
+                  md:text-3xl
+                  text-white
+                  leading-relaxed
+                "
+              >
+                You deserve a clear starting point.
+                <br />
+                We are exactly that.
+              </p>
+            </div>
 
           </div>
-        </div>
-      </div>
-    </section>
-  
+        </section>
 
-
-        <section className="relative overflow-hidden py-28 border-t border-[#11698e]/5">
-  <div className="absolute top-0 right-0 w-[450px] h-[450px] rounded-full bg-[#11698e]/[0.03] blur-3xl pointer-events-none" />
-  <div className="absolute bottom-0 left-0 w-[350px] h-[350px] rounded-full bg-[#59c36a]/[0.04] blur-3xl pointer-events-none" />
-
-  <div className="relative z-10 max-w-6xl mx-auto px-6">
-    
-    <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-14 items-start">
-      
-      <div>
-        <span className="text-xs font-semibold tracking-[0.25em] uppercase text-[#59c36a]">
-          How We Help
-        </span>
-
-        <h2
-          className="
-            mt-4
-            font-serif
-            text-4xl
-            sm:text-5xl
-            md:text-6xl
-            text-[#11698e]
-            leading-[0.95]
-            tracking-tight
-          "
-        >
-          What do we do?
-        </h2>
-      </div>
-
-      <div className="space-y-6">
-        <p className="text-lg leading-relaxed text-[#37474F]">
-          You don’t have to manage everything alone. We’re with you
-          at every step of the way.
-        </p>
-
-        <p className="text-lg leading-relaxed text-[#37474F]">
-          From understanding your concerns to helping you begin
-          therapy, scheduling sessions, and ensuring you feel
-          supported, we make sure the process doesn’t feel
-          overwhelming or disconnected.
-        </p>
-
-        <div
-          className="
-            border-l-2
-            border-[#59c36a]
-            pl-5
-          "
-        >
-          <p className="font-medium text-[#11698e] text-xl leading-relaxed">
-            We don’t just refer you to a therapist.
-            We stay with you through your journey.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div className="mt-14 sm:mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
-  {[
-    {
-      number: "01",
-      title: "Understand",
-      image: "/assets/understand.jpg",
-      color: "#11698e",
-      text: "We take the time to understand your concerns and what support feels right for you.",
-    },
-    {
-      number: "02",
-      title: "Connect",
-      image: "/assets/connect.jpg",
-      color: "#59c36a",
-      text: "We help match you with a therapist and guide you through the first steps of beginning therapy.",
-    },
-    {
-      number: "03",
-      title: "Support",
-      image: "/assets/support.jpg",
-      color: "#11698e",
-      text: "We continue supporting you throughout the process so you never feel alone or disconnected.",
-    },
-  ].map((item) => (
-    <div
-      key={item.title}
-      className="
-        group
-        overflow-hidden
-        rounded-3xl
-        border
-        border-[#11698e]/10
-        bg-white/80
-        backdrop-blur-sm
-        shadow-[0_8px_24px_rgba(17,105,142,0.05)]
-        transition-all
-        duration-500
-        hover:-translate-y-1
-        hover:shadow-[0_15px_40px_rgba(17,105,142,0.08)]
-        h-full
-      "
-    >
-      {/* Image */}
-      <div className="relative h-44 sm:h-52 md:h-56 overflow-hidden">
-        <Image
-          src={item.image}
-          alt={item.title}
-          fill
-          sizes="(max-width: 768px) 100vw, 33vw"
-          className="
-            object-cover
-            transition-transform
-            duration-700
-            group-hover:scale-105
-          "
-        />
-      </div>
-
-      {/* Content */}
-      <div className="p-5 sm:p-6 lg:p-8">
-        <div
-          className="
-            flex
-            items-center
-            justify-center
-            w-10
-            h-10
-            sm:w-12
-            sm:h-12
-            rounded-full
-            font-semibold
-            text-sm
-            sm:text-base
-          "
-          style={{
-            backgroundColor: `${item.color}15`,
-            color: item.color,
-          }}
-        >
-          {item.number}
-        </div>
-
-        <h3
-          className="
-            mt-4
-            sm:mt-6
-            text-lg
-            sm:text-xl
-            font-medium
-            text-[#11698e]
-          "
-        >
-          {item.title}
-        </h3>
-
-        <p
-          className="
-            mt-2
-            sm:mt-3
-            text-sm
-            sm:text-base
-            leading-relaxed
-            text-[#37474F]
-          "
-        >
-          {item.text}
-        </p>
-      </div>
-    </div>
-  ))}
-</div>
-  </div>
-</section>
-
-        <section className="relative overflow-hidden py-28 border-t border-[#11698e]/5">
-  <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-[#11698e]/[0.03] blur-3xl pointer-events-none" />
-  <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-[#59c36a]/[0.03] blur-3xl pointer-events-none" />
-
-  <div className="relative z-10 max-w-6xl mx-auto px-6">
-
-    <div className="grid lg:grid-cols-[360px_1fr] gap-16 items-start">
-
-      <div className="lg:sticky lg:top-32">
-        <span className="text-xs font-semibold tracking-[0.25em] uppercase text-[#59c36a]">
-          Our Purpose
-        </span>
-
-        <h2
-          className="
-            mt-4
-            font-serif
-            text-4xl
-            sm:text-5xl
-            md:text-6xl
-            leading-[0.95]
-            tracking-tight
-            text-[#11698e]
-          "
-        >
-          Why we exist?
-        </h2>
-
-        <div
-          className="
-            mt-10
-            w-20
-            h-[2px]
-            bg-[#59c36a]
-          "
-        />
-      </div>
-
-      <div
-        className="
-          rounded-[32px]
-          border
-          border-[#11698e]/10
-          bg-white/75
-          backdrop-blur-sm
-          p-8
-          md:p-10
-          shadow-[0_15px_50px_rgba(17,105,142,0.06)]
-        "
-      >
-        <div className="space-y-7 text-[18px] leading-relaxed text-[#37474F]">
-
-          <p>
-            When something feels off physically, you see a GP.
-            They listen, assess, and point you to exactly the right specialist.
-            It’s clear. It’s structured. You’re not left guessing.
-          </p>
-
-          <p>
-            Mental health should work the same way but right now, it doesn’t.
-          </p>
-
-          <p>
-            You’re searching, scrolling, trying to figure out where to even begin.
-          </p>
-
-          <p className="text-[#11698e] font-medium">
-            That’s where we come in.
-          </p>
-
-          <div
-            className="
-              rounded-2xl
-              bg-[#59c36a]/8
-              border
-              border-[#59c36a]/15
-              px-6
-              py-5
-            "
-          >
-            <p className="font-serif text-2xl text-[#11698e]">
-              Think of us as your GP for mental health!
-            </p>
-          </div>
-
-          <p>
-            We listen first, then guide you to the right support,
-            whether that’s therapy, psychiatry, neuropsychology,
-            or something else entirely.
-          </p>
-
-          <p>
-            Because finding help shouldn’t feel like another problem to solve.
-          </p>
-
-        </div>
-      </div>
-    </div>
-
-    <div
-      className="
-        mt-12
-        rounded-[28px]
-        border
-        border-[#11698e]/10
-        bg-[#11698e]
-        px-8
-        py-10
-        text-center
-      "
-    >
-      <p
-        className="
-          font-serif
-          text-2xl
-          md:text-3xl
-          text-white
-          leading-relaxed
-        "
-      >
-        You deserve a clear starting point.
-        <br />
-        We are exactly that.
-      </p>
-    </div>
-
-  </div>
-</section>
-
+        {/* How Support System Helps Section (Fixed Overflow & Clipping Container) */}
         <section className="relative overflow-hidden py-24 border-t border-[#11698e]/5">
-  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[700px] rounded-full bg-[#11698e]/[0.03] blur-3xl pointer-events-none" />
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[700px] rounded-full bg-[#11698e]/[0.03] blur-3xl pointer-events-none" />
 
-  <div className="relative z-10 max-w-6xl mx-auto px-6">
+          <div className="relative z-10 max-w-6xl mx-auto px-6">
 
-    <div
-      className="
-        overflow-hidden
-        rounded-[36px]
-        border
-        border-[#11698e]/10
-        bg-white/80
-        backdrop-blur-sm
-        shadow-[0_20px_60px_rgba(17,105,142,0.06)]
-      "
-    >
-      <div className="grid lg:grid-cols-[380px_1fr]">
-
-        <div
-          className="
-            relative
-            flex
-            flex-col
-            justify-center
-            p-8
-            lg:p-12
-            bg-[#11698e]
-            text-white
-          "
-        >
-          <span className="text-xs tracking-[0.25em] uppercase text-white/70">
-            Clinical Guidance
-          </span>
-
-          <h2
-            className="
-              mt-4
-              font-serif
-              text-4xl
-              md:text-5xl
-              leading-[0.95]
-            "
-          >
-            How Support
-            <br />
-            System helps
-          </h2>
-
-          <div className="mt-8 w-16 h-[2px] bg-[#59c36a]" />
-
-          <div
-            className="
-              mt-10
-              inline-flex
-              items-center
-              justify-center
-              w-16
-              h-16
-              rounded-2xl
-              bg-white/10
-              backdrop-blur-sm
-            "
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="30"
-              height="30"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M12 2v20" />
-              <path d="M2 12h20" />
-            </svg>
-          </div>
-        </div>
-
-        <div className="p-8 md:p-12 lg:p-14">
-
-          <p
-            className="
-              text-lg
-              md:text-xl
-              leading-relaxed
-              text-[#37474F]
-            "
-          >
-            We act as a structured clinical support layer between
-            you and therapy. Before therapy begins, we assess
-            patient readiness, expectations, context, and
-            preferences, ensuring that every referral is
-            intentional, not uncertain.
-          </p>
-
-          <div
-            className="
-              mt-10
-              rounded-3xl
-              border
-              border-[#59c36a]/15
-              bg-[#59c36a]/5
-              p-8
-            "
-          >
-            <span
+            <div
               className="
-                text-xs
-                uppercase
-                tracking-[0.25em]
-                text-[#59c36a]
-                font-semibold
+                overflow-hidden
+                rounded-[36px]
+                border
+                border-[#11698e]/10
+                bg-white
+                shadow-[0_20px_60px_rgba(17,105,142,0.06)]
               "
             >
-              Our Philosophy
-            </span>
+              <div className="grid grid-cols-1 lg:grid-cols-[380px_1fr] items-stretch">
 
-            <h3
-              className="
-                mt-3
-                font-serif
-                text-3xl
-                md:text-4xl
-                text-[#11698e]
-                leading-tight
-              "
-            >
-              Intentional Care
-            </h3>
+                <div
+                  className="
+                    relative
+                    flex
+                    flex-col
+                    justify-between
+                    p-8
+                    lg:p-12
+                    bg-[#11698e]
+                    text-white
+                  "
+                >
+                  <div>
+                    <span className="text-xs tracking-[0.25em] uppercase text-white/70">
+                      Clinical Guidance
+                    </span>
+
+                    <h2
+                      className="
+                        mt-4
+                        font-serif
+                        text-4xl
+                        md:text-5xl
+                        leading-[0.95]
+                      "
+                    >
+                      How Support
+                      <br />
+                      System helps
+                    </h2>
+
+                    <div className="mt-8 w-16 h-[2px] bg-[#59c36a]" />
+                  </div>
+
+                  <div
+                    className="
+                      mt-10
+                      inline-flex
+                      items-center
+                      justify-center
+                      w-16
+                      h-16
+                      rounded-2xl
+                      bg-white/10
+                      backdrop-blur-sm
+                    "
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="30"
+                      height="30"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="M12 2v20" />
+                      <path d="M2 12h20" />
+                    </svg>
+                  </div>
+                </div>
+
+                <div className="p-8 md:p-12 lg:p-14 flex flex-col justify-between bg-white">
+
+                  <p
+                    className="
+                      text-lg
+                      md:text-xl
+                      leading-relaxed
+                      text-[#37474F]
+                    "
+                  >
+                    We act as a structured clinical support layer between
+                    you and therapy. Before therapy begins, we assess
+                    patient readiness, expectations, context, and
+                    preferences, ensuring that every referral is
+                    intentional, not uncertain.
+                  </p>
+
+                  <div
+                    className="
+                      mt-10
+                      rounded-3xl
+                      border
+                      border-[#59c36a]/15
+                      bg-[#59c36a]/5
+                      p-6
+                      md:p-8
+                    "
+                  >
+                    <span
+                      className="
+                        text-xs
+                        uppercase
+                        tracking-[0.25em]
+                        text-[#59c36a]
+                        font-semibold
+                      "
+                    >
+                      Our Philosophy
+                    </span>
+
+                    <h3
+                      className="
+                        mt-2
+                        font-serif
+                        text-3xl
+                        md:text-4xl
+                        text-[#11698e]
+                        leading-tight
+                      "
+                    >
+                      Intentional Care
+                    </h3>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
           </div>
+        </section>
 
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
+        {/* How It Works Section */}
         <section 
           ref={worksRef}
           className="py-32 flex flex-col justify-center border-t border-[#11698e]/5"
@@ -1364,105 +1370,102 @@ export default function Home() {
           </div>
         </section>
 
-       <section
-  ref={differentRef}
-  className="py-20 md:py-32 border-t border-[#11698e]/5 bg-white"
->
-  <div className="container max-w-6xl mx-auto px-5 sm:px-6">
-    
-    {/* Heading */}
-    <div className="text-center mb-12 md:mb-16">
-      <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-[#11698e] tracking-tight">
-        What makes us different?
-      </h2>
-    </div>
-
-    {/* Cards */}
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-
-      {[
-        {
-          title: "A Holistic Approach",
-          text: "We bridge the gap between psychiatrists and psychologists so your care is aligned, not fragmented.",
-          image: "/assets/a1.jpg",
-        },
-        {
-          title: "Getting It Right From the Start",
-          text: "Instead of trial and error, we focus on finding the right fit early with expert guidance.",
-          image: "/assets/a2.jpg",
-        },
-        {
-          title: "Not Limited by Location or Options",
-          text: "We work with a wide network of therapists, giving you more relevant and flexible options.",
-          image: "/assets/a3.jpg",
-        },
-        {
-          title: "Care That Fits You",
-          text: "We consider affordability, comfort, language, and preferences and make sure you are well aligned.",
-          image: "/assets/a4.jpg",
-        },
-      ].map((item, index) => (
-        <div
-          key={index}
-          className="
-            group
-            bg-white
-            border
-            border-[#11698e]/10
-            rounded-[28px]
-            overflow-hidden
-            transition-all
-            duration-500
-            hover:-translate-y-1
-            hover:border-[#11698e]/20
-            hover:shadow-[0_20px_50px_rgba(17,105,142,0.08)]
-          "
+        {/* What Makes Us Different Section */}
+        <section
+          ref={differentRef}
+          className="py-20 md:py-32 border-t border-[#11698e]/5 bg-white"
         >
-          <div
-            className="
-              grid
-              grid-cols-1
-              sm:grid-cols-[220px_1fr]
-              min-h-[220px]
-            "
-          >
-            {/* Image */}
-            <div className="relative h-56 sm:h-full overflow-hidden">
-              <Image
-                src={item.image}
-                alt={item.title}
-                fill
-                sizes="(max-width: 640px) 100vw, 220px"
-                className="
-                  object-cover
-                  transition-transform
-                  duration-700
-                  group-hover:scale-105
-                "
-              />
-
-              {/* subtle overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent" />
+          <div className="container max-w-6xl mx-auto px-5 sm:px-6">
+            
+            <div className="text-center mb-12 md:mb-16">
+              <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-[#11698e] tracking-tight">
+                What makes us different?
+              </h2>
             </div>
 
-            {/* Content */}
-            <div className="p-6 sm:p-8 flex flex-col justify-center">
-              <h3 className="font-serif text-xl sm:text-2xl text-[#11698e] mb-4 leading-tight">
-                {item.title}
-              </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-              <p className="text-[#5c6b68] text-sm sm:text-base leading-relaxed">
-                {item.text}
-              </p>
+              {[
+                {
+                  title: "A Holistic Approach",
+                  text: "We bridge the gap between psychiatrists and psychologists so your care is aligned, not fragmented.",
+                  image: "/assets/a1.jpg",
+                },
+                {
+                  title: "Getting It Right From the Start",
+                  text: "Instead of trial and error, we focus on finding the right fit early with expert guidance.",
+                  image: "/assets/a2.jpg",
+                },
+                {
+                  title: "Not Limited by Location or Options",
+                  text: "We work with a wide network of therapists, giving you more relevant and flexible options.",
+                  image: "/assets/a3.jpg",
+                },
+                {
+                  title: "Care That Fits You",
+                  text: "We consider affordability, comfort, language, and preferences and make sure you are well aligned.",
+                  image: "/assets/a4.jpg",
+                },
+              ].map((item, index) => (
+                <div
+                  key={index}
+                  className="
+                    group
+                    bg-white
+                    border
+                    border-[#11698e]/10
+                    rounded-[28px]
+                    overflow-hidden
+                    transition-all
+                    duration-500
+                    hover:-translate-y-1
+                    hover:border-[#11698e]/20
+                    hover:shadow-[0_20px_50px_rgba(17,105,142,0.08)]
+                  "
+                >
+                  <div
+                    className="
+                      grid
+                      grid-cols-1
+                      sm:grid-cols-[220px_1fr]
+                      min-h-[220px]
+                    "
+                  >
+                    <div className="relative h-56 sm:h-full overflow-hidden">
+                      <Image
+                        src={item.image}
+                        alt={item.title}
+                        fill
+                        sizes="(max-width: 640px) 100vw, 220px"
+                        className="
+                          object-cover
+                          transition-transform
+                          duration-700
+                          group-hover:scale-105
+                        "
+                      />
+
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent" />
+                    </div>
+
+                    <div className="p-6 sm:p-8 flex flex-col justify-center">
+                      <h3 className="font-serif text-xl sm:text-2xl text-[#11698e] mb-4 leading-tight">
+                        {item.title}
+                      </h3>
+
+                      <p className="text-[#5c6b68] text-sm sm:text-base leading-relaxed">
+                        {item.text}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
+
           </div>
-        </div>
-      ))}
-    </div>
+        </section>
 
-  </div>
-</section>
-
+        {/* Testimonials Section */}
         <section
           ref={testimonialsRef}
           className="py-20 md:py-28 flex flex-col justify-center border-t border-[#11698e]/5 overflow-hidden"
@@ -1491,6 +1494,7 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Founders Section */}
         <section
           ref={foundersRef}
           className="relative overflow-hidden min-h-screen py-24 flex items-center justify-center border-t border-[#11698e]/5"
@@ -1552,15 +1556,14 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="md:col-span-4 flex justify-center md:justify-end relative w-full h-[280px] md:h-[320px] self-end mt-4 md:mt-0">
-              <Image
-              src="/assets/hd.png"
-              alt="Hrutuja Dongare - Founder & CEO"
-              fill
-              sizes="(max-width: 768px) 100vw, 33vw"
-              /* scale-125 boosts size by 25%, scale-135 or scale-150 for larger */
-              className="object-contain object-bottom select-none pointer-events-none scale-125 origin-bottom"
-  />
-</div>
+                  <Image
+                    src="/assets/hd.png"
+                    alt="Hrutuja Dongare - Founder & CEO"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-contain object-bottom select-none pointer-events-none scale-125 origin-bottom"
+                  />
+                </div>
               </div>
 
               <div
@@ -1606,14 +1609,13 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="md:col-span-4 flex justify-center md:justify-end relative w-full h-[280px] md:h-[320px] self-end mt-4 md:mt-0">
-                <Image
-                src="/assets/archee.png"
-                alt="Archee Gupte - Co-Founder & COO"
-                fill
-                sizes="(max-width: 768px) 100vw, 33vw"
-                /* scale-125 increases size by 25%, scale-150 by 50% */
-                className="object-contain object-bottom select-none pointer-events-none scale-125 origin-bottom" 
-/>
+                  <Image
+                    src="/assets/archee.png"
+                    alt="Archee Gupte - Co-Founder & COO"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-contain object-bottom select-none pointer-events-none scale-125 origin-bottom" 
+                  />
                 </div>
               </div>
 
