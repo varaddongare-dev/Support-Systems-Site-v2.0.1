@@ -1552,14 +1552,15 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="md:col-span-4 flex justify-center md:justify-end relative w-full h-[280px] md:h-[320px] self-end mt-4 md:mt-0">
-                  <Image
-                    src="/assets/hd.png"
-                    alt="Hrutuja Dongare - Founder & CEO"
-                    fill
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                    className="object-contain object-bottom select-none pointer-events-none"
-                  />
-                </div>
+              <Image
+              src="/assets/hd.png"
+              alt="Hrutuja Dongare - Founder & CEO"
+              fill
+              sizes="(max-width: 768px) 100vw, 33vw"
+              /* scale-125 boosts size by 25%, scale-135 or scale-150 for larger */
+              className="object-contain object-bottom select-none pointer-events-none scale-125 origin-bottom"
+  />
+</div>
               </div>
 
               <div
@@ -1605,13 +1606,14 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="md:col-span-4 flex justify-center md:justify-end relative w-full h-[280px] md:h-[320px] self-end mt-4 md:mt-0">
-                  <Image
-                    src="/assets/IMG_7072.png"
-                    alt="Archee Gupte - Co-Founder & COO"
-                    fill
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                    className="object-contain object-bottom select-none pointer-events-none"
-                  />
+                <Image
+                src="/assets/archee.png"
+                alt="Archee Gupte - Co-Founder & COO"
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
+                /* scale-125 increases size by 25%, scale-150 by 50% */
+                className="object-contain object-bottom select-none pointer-events-none scale-125 origin-bottom" 
+/>
                 </div>
               </div>
 
