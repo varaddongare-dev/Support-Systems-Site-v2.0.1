@@ -39,7 +39,7 @@ export default function EventsPage() {
         "Step away from the screen and into the serenity of nature with The Pause Project's immersive outdoor wellness experience. Designed to refresh your mind and body, our events blend scenic nature trails, guided grounding meditations, movement activities, and wholesome social connection.",
         "Experience the proven psychological benefits of green spaces through mindful trekking, interactive team activities, and tranquil moments of reflection under the open sky. Whether you want to de-stress, build community, or simply enjoy a day of adventure and fresh air, our curated excursions offer a restorative escape into nature."
       ],
-      videoSrc: "/assets/Event_Video.mp4",
+      videoSrc: "/assets/event_video_trek.mp4",
       showExpectations: false, // Removes "What to expect" for the trek
       showButton: true,
       buttonText: "Click here to know more about upcoming events",
