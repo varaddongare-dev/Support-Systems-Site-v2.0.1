@@ -117,14 +117,13 @@ export default function EventsPage() {
               <div className="lg:col-span-7 flex flex-col items-center text-center lg:items-start lg:text-left">
                 
                 <div className="mb-6 h-20 w-auto flex items-center justify-center lg:justify-start">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img 
-                    src="/assets/pausepro.svg" 
-                    alt="The Pause Project Logo" 
-                    className="h-full w-auto object-contain"
-                  />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img 
+                src="/assets/thepause_project_logo_(2).png" 
+                alt="The Pause Project Logo" 
+                className="h-full w-auto object-contain"
+                />
                 </div>
-
                 <h1 className="font-serif text-[#11698e] text-[2.5rem] sm:text-[3.5rem] md:text-[4rem] xl:text-[4.5rem] leading-[1.1] tracking-[-0.02em] max-w-2xl">
                   {event.title}
                   <span className="block mt-3 text-[#59c36a] italic font-normal text-[0.55em] tracking-wide leading-[1.2]">
