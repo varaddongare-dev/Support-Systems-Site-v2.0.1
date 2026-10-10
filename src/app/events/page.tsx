@@ -18,8 +18,10 @@ export default function EventsPage() {
         "Paint Your Peace is a unique neuroscience-informed wellness experience that blends mindful tea tasting, creative mandala art, and meaningful social connection. Designed to help participants pause, de-stress, and reconnect with themselves, the session combines evidence-based insights from neuropsychology with engaging, hands-on activities that promote relaxation, emotional wellbeing, and present-moment awareness.",
         "Guided by a neuropsychology expert, participants explore the science behind stress, attention, emotions, and relaxation while enjoying calming herbal teas and a mindful mandala-creation experience. Through laughter, movement, reflection, and creativity, The Pause Project offers a refreshing and accessible approach to mental wellbeing, transforming an ordinary gathering into a memorable journey of self-discovery, connection, and inner calm."
       ],
+      mediaType: "video",
       videoSrc: "/assets/eventvideo.mp4",
-      showExpectations: true, // Keeps "What to expect" for mandala
+      images: [],
+      showExpectations: true,
       showButton: false,
       buttonText: "",
       buttonHref: "",
@@ -39,11 +41,33 @@ export default function EventsPage() {
         "Step away from the screen and into the serenity of nature with The Pause Project's immersive outdoor wellness experience. Designed to refresh your mind and body, our events blend scenic nature trails, guided grounding meditations, movement activities, and wholesome social connection.",
         "Experience the proven psychological benefits of green spaces through mindful trekking, interactive team activities, and tranquil moments of reflection under the open sky. Whether you want to de-stress, build community, or simply enjoy a day of adventure and fresh air, our curated excursions offer a restorative escape into nature."
       ],
+      mediaType: "video",
       videoSrc: "/assets/event_video_trek.mp4",
-      showExpectations: false, // Removes "What to expect" for the trek
+      images: [],
+      showExpectations: false,
+      showButton: false,
+      buttonText: "",
+      buttonHref: "",
+      expectations: []
+    },
+    {
+      id: "mini-clay-event",
+      title: "Mini Clay Event",
+      subtitle: "Clay Modelling",
+      descriptions: [
+        "Step into a hands-on creative session with our Mini Clay Event! Designed for small hands and big creativity, this workshop lets you sculpt your own pieces, enjoy good company, and take home a relaxing, tactile experience.",
+        "Pets are welcome! All materials and drinks are included, and special discounts are available. Join us for a wonderful afternoon of clay, good people, and good vibes."
+      ],
+      mediaType: "images",
+      videoSrc: "",
+      images: [
+        "/assets/Clay_Event.png",
+        "/assets/Clay_modelling_workshop.png"
+      ],
+      showExpectations: false,
       showButton: true,
-      buttonText: "Click here to know more about upcoming events",
-      buttonHref: "https://www.instagram.com/_supportsystems_",
+      buttonText: "Click here to know more about the event",
+      buttonHref: "https://wa.me/919740746668?text=Hi,%20I%20would%20like%20to%20know%20more%20about%20the%20upcoming%20Mini%20Clay%20Event!",
       expectations: []
     }
   ];
@@ -117,12 +141,12 @@ export default function EventsPage() {
               <div className="lg:col-span-7 flex flex-col items-center text-center lg:items-start lg:text-left">
                 
                 <div className="mb-6 h-20 w-auto flex items-center justify-center lg:justify-start">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img 
-                src="/assets/thepause_project_logo_(2).png" 
-                alt="The Pause Project Logo" 
-                className="h-full w-auto object-contain"
-                />
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img 
+                    src="/assets/thepause_project_logo_(2).png" 
+                    alt="The Pause Project Logo" 
+                    className="h-full w-auto object-contain"
+                  />
                 </div>
                 <h1 className="font-serif text-[#11698e] text-[2.5rem] sm:text-[3.5rem] md:text-[4rem] xl:text-[4.5rem] leading-[1.1] tracking-[-0.02em] max-w-2xl">
                   {event.title}
@@ -139,7 +163,7 @@ export default function EventsPage() {
                   ))}
                 </div>
 
-                {/* What to Expect Section (Only renders if showExpectations is true) */}
+                {/* What to Expect Section */}
                 {event.showExpectations && (
                   <div className="mt-14 w-full max-w-4xl">
                     <div className="flex items-center justify-center lg:justify-start gap-3 mb-7">
@@ -191,7 +215,7 @@ export default function EventsPage() {
                   </div>
                 )}
 
-                {/* Conditional Registration Button */}
+                {/* Conditional WhatsApp Redirect Button */}
                 {event.showButton && (
                   <div className="mt-10 flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
                     <Link
@@ -213,36 +237,55 @@ export default function EventsPage() {
 
               </div>
 
-              {/* Right Column: Video Container */}
+              {/* Right Column: Video Container OR Side-by-Side Images */}
               <div className="lg:col-span-5 flex flex-col items-center justify-start pt-4 lg:pt-12">
-                <div className="relative w-[340px] aspect-[9/16] rounded-[2.5rem] overflow-hidden border-8 border-white bg-white shadow-[0_24px_60px_rgba(17,105,142,0.12)] group">
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#11698e]/20 via-transparent to-transparent z-10 pointer-events-none transition-opacity duration-300 group-hover:opacity-40" />
-                  <video
-                    ref={(el) => { videoRefs.current[event.id] = el; }}
-                    src={event.videoSrc}
-                    controls={isPlaying}
-                    playsInline
-                    className="w-full h-full object-cover relative z-0"
-                    onPause={() => setPlayingStates(prev => ({ ...prev, [event.id]: false }))}
-                    onPlay={() => setPlayingStates(prev => ({ ...prev, [event.id]: true }))}
-                  />
-                  {!isPlaying && (
-                    <div className="absolute inset-0 bg-black/20 flex items-center justify-center z-10 transition-opacity duration-300">
-                      <button
-                        onClick={() => handlePlayToggle(event.id)}
-                        className="w-20 h-20 flex items-center justify-center rounded-full bg-[#11698e] text-white shadow-[0_8px_25px_rgba(17,105,142,0.4)] transition-all duration-300 hover:scale-110 hover:bg-[#59c36a] hover:shadow-[0_8px_25px_rgba(89,195,106,0.4)]"
-                        aria-label="Play video"
-                      >
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8 ml-1">
-                          <path fillRule="evenodd" d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z" clipRule="evenodd" />
-                        </svg>
-                      </button>
+                {event.mediaType === "video" ? (
+                  <>
+                    <div className="relative w-[340px] aspect-[9/16] rounded-[2.5rem] overflow-hidden border-8 border-white bg-white shadow-[0_24px_60px_rgba(17,105,142,0.12)] group">
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#11698e]/20 via-transparent to-transparent z-10 pointer-events-none transition-opacity duration-300 group-hover:opacity-40" />
+                      <video
+                        ref={(el) => { videoRefs.current[event.id] = el; }}
+                        src={event.videoSrc}
+                        controls={isPlaying}
+                        playsInline
+                        className="w-full h-full object-cover relative z-0"
+                        onPause={() => setPlayingStates(prev => ({ ...prev, [event.id]: false }))}
+                        onPlay={() => setPlayingStates(prev => ({ ...prev, [event.id]: true }))}
+                      />
+                      {!isPlaying && (
+                        <div className="absolute inset-0 bg-black/20 flex items-center justify-center z-10 transition-opacity duration-300">
+                          <button
+                            onClick={() => handlePlayToggle(event.id)}
+                            className="w-20 h-20 flex items-center justify-center rounded-full bg-[#11698e] text-white shadow-[0_8px_25px_rgba(17,105,142,0.4)] transition-all duration-300 hover:scale-110 hover:bg-[#59c36a] hover:shadow-[0_8px_25px_rgba(89,195,106,0.4)]"
+                            aria-label="Play video"
+                          >
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8 ml-1">
+                              <path fillRule="evenodd" d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z" clipRule="evenodd" />
+                            </svg>
+                          </button>
+                        </div>
+                      )}
                     </div>
-                  )}
-                </div>
-                <p className="mt-4 text-xs font-medium tracking-wide text-[#5c6b68]/70 text-center uppercase w-[340px]">
-                  See the experience in action
-                </p>
+                  </>
+                ) : (
+                  <div className="grid grid-cols-2 gap-4 w-[420px] lg:w-[460px]">
+                    {event.images.map((imgSrc, imgIdx) => (
+                      <div key={imgIdx} className="flex flex-col items-center">
+                        <div className="relative w-full aspect-[9/16] rounded-[2rem] overflow-hidden border-4 border-white bg-[#faf8f3] shadow-[0_20px_50px_rgba(17,105,142,0.12)] group">
+                          {/* eslint-disable-next-line @next/next/no-img-element */}
+                          <img
+                            src={imgSrc}
+                            alt={`${event.title} poster ${imgIdx + 1}`}
+                            className={`w-full h-full ${imgIdx === 0 ? 'object-cover' : 'object-contain p-2'} group-hover:scale-105 transition-transform duration-500`}
+                          />
+                        </div>
+                        <span className="mt-2 text-[11px] font-medium tracking-wide text-[#5c6b68]/70 text-center uppercase">
+                          Poster {imgIdx + 1}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
 
             </div>
