@@ -279,9 +279,6 @@ export default function EventsPage() {
                             className={`w-full h-full ${imgIdx === 0 ? 'object-cover' : 'object-contain p-2'} group-hover:scale-105 transition-transform duration-500`}
                           />
                         </div>
-                        <span className="mt-2 text-[11px] font-medium tracking-wide text-[#5c6b68]/70 text-center uppercase">
-                          Poster {imgIdx + 1}
-                        </span>
                       </div>
                     ))}
                   </div>
